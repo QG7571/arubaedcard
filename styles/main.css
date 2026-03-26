@@ -15,6 +15,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     background-color: rgba(245, 245, 245, 0.451);
+    line-height: 1.5;
 }
 header img {
     max-width: 200px;
@@ -28,53 +29,82 @@ header {
     font-size: 110%;
     font-weight: 500;
 }
-form formgroup{
+.formgroup{
     display: flex;
     align-items: baseline;
+    gap: 4px;
+    padding-top: 5px;
+}
+form h5 {
+    padding-top: 15px;
 }
 .formgroup label {
     width: 30%;
     text-align: right;
-    margin-right: 5px;
+    padding-right: 5px;
 }
-input[type=text], input[type=date], select {
+input[type=text], 
+input[type=date], 
+select, 
+input[type=tel], 
+input[type=email], 
+input[type=number]{
     font-size: 90%;
-    width: 70%;
+    width: 40%;
 }
 .radiogroup {
+    display: flex;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 30%;
 }
 .radiogroup label {
     text-align: left;
     margin-left: 5px;
 }
+.radiotype label {
+    width: 70%;
+    text-align: left;
+    padding-left: 5px;
+}
+input[type=checkbox]{
+    margin-left: 5%;
+}
 label[for=acknowledge1] {
     width: 100%;
     text-align: left;
 }
-.buttons {
-    padding: 1em;
-}
+
 input[type=submit] {
     background-color: greenyellow;
     color: black;
-    padding: 1em;
     border: 3em;
     border-radius: 10em;
-    font-size: 130%;
+    font-size: 110%;
+    height: 50px;
+    padding: 0 8px;
 }
 input[type=reset] {
     background-color: rgb(255, 68, 0);
     color: rgb(118, 0, 0);
-    padding: 1em;
     border: 3em;
     border-radius: 10em;
-    font-size: 130%;
+    font-size: 110%;
+    height: 50px;
+    padding: 0 8px;
 }
-
+.buttons {
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
 .intro {
+    width: 90%;
+    margin 0 auto;
     padding: 2em;
+}
+.intro h4 {
+    padding-top: 10px;
 }
 .intro ul {
     padding-left: 2.5em;
@@ -87,16 +117,21 @@ footer {
 
 @media only screen and (max-width: 767px) {
    body {
-    max-width: 100%;
+    width: 100%;
    } 
    header {
     flex-direction: column;
    }
+   intro {
+    width: 95%;
+    margin 0 auto;
+   }
    header h2 {
+    font-size: 125%;
     text-align: center;
    }
    form {
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
    }
    .formgroup {
@@ -106,10 +141,10 @@ footer {
     flex-direction: row;
    }
    formgroup label {
-    width: 100%;
+    width: 95%;
     text-align: left;
    }
    input[type=text], input[type=date], select {
-    width: 100%;
+    width: 95%;
    }
 }
